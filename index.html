@@ -1,0 +1,4253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dream Pro</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#" class="logo">
+              <img src="assets/logo.png" alt="logo" class="logo-white" />
+              <img src="assets/logo.png" alt="logo" class="logo-dark" />
+              <span>Dream Pro</span>
+            </a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#about">À Propos</a></li>
+          <li><a href="#deals">Nos Véhicules</a></li>
+          <li><a href="#choose">Pourquoi nous choisir ?</a></li>
+          <li><a href="#client">Avis</a></li>
+          <li><a href="#">.</a></li>
+        </ul>
+        <!-- <div class="nav__btns">
+          <button class="btn">Dream Pro</button>
+        </div> -->
+      </nav>
+      <div class="header__container" id="home">
+        <div class="header__image">
+          <img src="assets/scout1.png" alt="header" />
+        </div>
+        <div class="header__content">
+          <h2>👍 Site d'achat de véhicules professionel 100 % fiable sur Los Santos</h2>
+          <h1>CATALOGUE DE NOS VÉHICULES</h1>
+          <p class="section__description">
+            Découvrez une entreprise de vente de véhicules fluide avec nous. Choisissez parmi une gamme de véhicules haut de gamme adaptés à votre style et à vos besoins, et prenez la route en toute confiance. Rapide, simple et fiable : achetez votre véhicule dès aujourd'hui !
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- <section class="header__form">
+      <form action="/">
+        <div class="input__group">
+          <label for="location">Pick up & Return location</label>
+          <input
+            type="text"
+            name="location"
+            id="location"
+            placeholder="Dallas, Texas"
+          />
+        </div>
+        <div class="input__group">
+          <label for="start">Pick up date</label>
+          <input
+            type="text"
+            name="start"
+            id="start"
+            placeholder="Aug 16, 10:00 AM"
+          />
+        </div>
+        <div class="input__group">
+          <label for="stop">Return date</label>
+          <input
+            type="text"
+            name="stop"
+            id="stop"
+            placeholder="Aug 18, 10:00 PM"
+          />
+        </div>
+        <button class="btn">Search <i class="ri-search-line"></i></button>
+      </form>
+    </section> -->
+
+    <section class="section__container about__container" id="about">
+      <h2 class="section__header">Comment ça marche</h2>
+      <p class="section__description">  
+        Acheter un véhicule avec nous, c'est simple ! Choisissez votre véhicule, rejoignez notre discord, prenez rendez-vous. Nous nous occupons du reste pour un départ serein.
+      </p>
+      <div class="about__grid">
+        <div class="about__card">
+          <span><i class="ri-error-warning-fill"></i></span>
+          <h4>Fiabilité</h4>
+          <p>
+            Choisissez parmi une large sélection de véhicules rigoureusement inspectés, garantissant qualité et sérénité à l'achat.
+          </p>
+        </div>
+        <div class="about__card">
+          <span><i class="ri-calendar-event-fill"></i></span>
+          <h4>Date d'achat</h4>
+          <p>
+            Choisissez la date qui vous convient pour finaliser votre achat et récupérer votre véhicule en toute tranquillité.
+          </p>
+        </div>        
+        <div class="about__card">
+          <span><i class="ri-key-2-fill"></i></span>
+          <h4>Achat Simplifié</h4>
+          <p>
+            Finalisez votre achat en quelques clics et récupérez votre véhicule rapidement, sans tracas.
+          </p>
+        </div>        
+      </div>
+    </section>
+
+    <section class="deals" id="deals">
+      <div class="section__container deals__container">
+        <h2 class="section__header">Nos véhicules d'entreprises disponibles</h2>
+        <p class="section__description">
+          Découvrez nos meilleures véhicules, soigneusement sélectionnées pour vous offrir le meilleur rapport qualité-prix et la meilleure expérience. Achetez dès maintenant et conduisez votre véhicule préféré à un prix incroyable !
+        </p>
+        <div class="deals__tabs">
+          <button class="btn active" data-id="Police">Police</button>
+          <button class="btn" data-id="Sheriff">Sheriff</button>
+          <button class="btn" data-id="EMS">EMS</button>
+          <button class="btn" data-id="Armurier">Armurier</button>
+          <button class="btn" data-id="Armee">Armée</button>
+          <button class="btn" data-id="Bus">Bus</button>
+          <button class="btn" data-id="Camions">Camions</button>
+          <button class="btn" data-id="Events">Événements</button>
+          <button class="btn" data-id="Ferme">Ferme</button>
+          <button class="btn" data-id="FIB">FIB</button>
+          <button class="btn" data-id="Gouv">Gouvernement</button>
+          <button class="btn" data-id="LGuard">LifeGuard</button>
+          <button class="btn" data-id="USMarshall">US Marshall</button>
+          <button class="btn" data-id="Mecano">Mécano</button>
+          <button class="btn" data-id="ParkRangers">Park Rangers</button>
+          <button class="btn" data-id="Taxi">Taxi</button>
+        </div>
+        <div id="Police" class="tab__content active">
+          <div class="deals__card">
+            <img src="assets/dlballer8.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(1133)</span>
+            </div>
+            <h4>Baller ST-D (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 20km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$99 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlbuffalo4.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1569)</span>
+            </div>
+            <h4>Buffalo STX (LPSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 5km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$105 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlcade3.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(369)</span>
+            </div>
+            <h4>Cavalcade XL (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$70 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlcara.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(185)</span>
+            </div>
+            <h4>Caracara (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 600km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$125 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlcinq.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1109)</span>
+            </div>
+            <h4>Cinquemila (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 5000km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$93 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlcomet6.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(2119)</span>
+            </div>
+            <h4>Comet S2 (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 270km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$95 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlcomni.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(1373)</span>
+            </div>
+            <h4>Omnis e-GT (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 1 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 695km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Électrique
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$80 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlcont.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(622)</span>
+            </div>
+            <h4>Contender (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 1250km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$102 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlgranger2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(744)</span>
+            </div>
+            <h4>Granger 3600LX (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 320km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$76 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dljugular.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(689)</span>
+            </div>
+            <h4>Jugular (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 1 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 150km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$100 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlkomoda.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(404)</span>
+            </div>
+            <h4>Komoda (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 500km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$90 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlmanch.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(375)</span>
+            </div>
+            <h4>Manchez Scout (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 95km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$22 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dloutlaw.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(1795)</span>
+            </div>
+            <h4>Outlaw (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 165km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$55 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlpanto.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(953)</span>
+            </div>
+            <h4>Panto (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 250km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$20 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlrhine.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(1803)</span>
+            </div>
+            <h4>Rhinehart (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 585km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$85 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlshin.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(333)</span>
+            </div>
+            <h4>Shinobi (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 65km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$42 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlstalker2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(597)</span>
+            </div>
+            <h4>Landstalker XL (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 800km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$75 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dltenf2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1720)</span>
+            </div>
+            <h4>10F Widebody (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 5km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$115 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlturismo3.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1027)</span>
+            </div>
+            <h4>Turismo Omaggio (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 35km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$100 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlvigero2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1468)</span>
+            </div>
+            <h4>Vigero ZX (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 600km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$92 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlvstr.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(388)</span>
+            </div>
+            <h4>V-STR (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 960km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$92 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/rcdtruck.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1)</span>
+            </div>
+            <h4>Camero Robot (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Électrique
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$35 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/lspdinsur.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(3)</span>
+            </div>
+            <h4>Insurgent (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 50km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$500 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/rookbb.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(0)</span>
+            </div>
+            <h4>S.W.A.T (LSPD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$95 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Sheriff" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/bcsdb.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(323)</span>
+            </div>
+            <h4>Moto (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 5km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$25 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/bombsemite.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(250)</span>
+            </div>
+            <h4>SUV Banalisé (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 25km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$55 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/buffalosxpol.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1331)</span>
+            </div>
+            <h4>Buffalo STX (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 500km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$95 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/fibp3.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(568)</span>
+            </div>
+            <h4>Sheriff Cruiser (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 250km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$45 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/lssdinsur.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(6)</span>
+            </div>
+            <h4>Insurgent (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 10km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$500 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/lssdmule.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1)</span>
+            </div>
+            <h4>Mule (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$100 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/lssdscout1.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(1096)</span>
+            </div>
+            <h4>Scout 1 (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 1 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 500km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$55 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/lssdscout2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(1475)</span>
+            </div>
+            <h4>Scout 2 (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 65km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$52 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/lssdscoutnew1.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1031)</span>
+            </div>
+            <h4>Scout New 1 (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 1 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 250km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$65 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/lssdscoutnew2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(577)</span>
+            </div>
+            <h4>Scout New 2 (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 2 Propriétaires
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 2500km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$68 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/lssdscoutnew3.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(590)</span>
+            </div>
+            <h4>Scout New 3 (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 1 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 675km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$70 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/lssdsecurity1.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(1039)</span>
+            </div>
+            <h4>Buffalo S Security (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 75km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$85 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/lssdumk3.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(92)</span>
+            </div>
+            <h4>Buffalo S Banalisée (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 155km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$80 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/pdumksx.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(962)</span>
+            </div>
+            <h4>Buffalo STX Banalisée (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 1 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 595km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$92 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/polalamop2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(53)</span>
+            </div>
+            <h4>Alamo (LSSD)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 230km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$62 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="EMS" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/dlamb.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1300)</span>
+            </div>
+            <h4>Sadler Ambulance (EMS)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 3 Propriétaires
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 5030km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$170 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlbuffalo.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(906)</span>
+            </div>
+            <h4>Buffalo (EMS)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 550km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$75 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlemsb.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1732)</span>
+            </div>
+            <h4>Moto (EMS)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 550km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$25 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlgranger.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(749)</span>
+            </div>
+            <h4>Granger (EMS)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 75km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$78 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/dlissiamb.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(455)</span>
+            </div>
+            <h4>Issi Sport (EMS)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 620km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$55 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/emsnspeedo.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(250)</span>
+            </div>
+            <h4>Speedo (EMS)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 965km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$165 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/aleutianems.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1816)</span>
+            </div>
+            <h4>Aleutian (EMS)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 1 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 1040km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$45 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Armurier" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/aboxville.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(388)</span>
+            </div>
+            <h4>Boxville (Ammu Nation)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 200km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$54 800<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/aburrito.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(572)</span>
+            </div>
+            <h4>Burrito (Ammu Nation)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 785km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$39 500<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/astockade.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(2)</span>
+            </div>
+            <h4>Stockade (Ammu Nation)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 5km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$400 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Armee" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/barracks2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(3)</span>
+            </div>
+            <h4>Barracks Semi (Armée)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 5km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$275 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/trailersmall2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(0)</span>
+            </div>
+            <h4>Remorque Anti Air (Armée)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$45 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/armytrailer.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(0)</span>
+            </div>
+            <h4>Remorque Plateau (Armée)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$55 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/armytanker.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(0)</span>
+            </div>
+            <h4>Remorque Citerne (Armée)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$60 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/barracks3.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1)</span>
+            </div>
+            <h4>Transport de troupes 2 (Armée)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 30km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$255 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/crusader.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(6)</span>
+            </div>
+            <h4>Crusader (Armée)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 150km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$120 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/barracks.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(2)</span>
+            </div>
+            <h4>Transport de troupes (Armée)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 55km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$250 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Bus" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/tourbus.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(2)</span>
+            </div>
+            <h4>Tourbus</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 50km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$98 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/bus.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1)</span>
+            </div>
+            <h4>Bus</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 20km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$420 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/coach.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1)</span>
+            </div>
+            <h4>Dashound (Bus)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 10km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$450 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/rentalbus.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(4)</span>
+            </div>
+            <h4>Rental Bus</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 100km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$95 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Camions" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/phantom3.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1)</span>
+            </div>
+            <h4>Phantom (Camions)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 5km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$345 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/mule.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(3)</span>
+            </div>
+            <h4>Mule (Camions)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 25km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$135 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/benson.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(6)</span>
+            </div>
+            <h4>Benson (Camions)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 55km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$125 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/packer.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(2)</span>
+            </div>
+            <h4>Packer (Camions)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 100km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$295 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/trash.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(6)</span>
+            </div>
+            <h4>Camion de poubelles (Camions)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 165km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$415 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/pounder.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(8)</span>
+            </div>
+            <h4>Pounder (Camions)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 600km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$305 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Events" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/pbus2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(0)</span>
+            </div>
+            <h4>Festival Bus (Événements)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$430 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/formula.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(6)</span>
+            </div>
+            <h4>Formula PR4 (Événements)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$450 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/formula2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(3)</span>
+            </div>
+            <h4>Formula R88 (Événements)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 5km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$475 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/openwheel1.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(8)</span>
+            </div>
+            <h4>Formula BR8 (Événements)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 35km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$495 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/openwheel2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(1)</span>
+            </div>
+            <h4>Formula DR1 (Événements)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 20km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$495 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Ferme" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/baletrailer.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(0)</span>
+            </div>
+            <h4>Remorque à foin (Ferme)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$15 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/graintrailer.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(0)</span>
+            </div>
+            <h4>Remorque à grain (Ferme)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$18 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/tractor2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(0)</span>
+            </div>
+            <h4>Tracteur (Ferme)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$325 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/raketrailer.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(0)</span>
+            </div>
+            <h4>Herse agricole (Ferme)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$9 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="FIB" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/revolter.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(3)</span>
+            </div>
+            <h4>Revolter (FIB)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 50km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$115 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/brawler.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(5)</span>
+            </div>
+            <h4>Brawler (FIB)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 750km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$145 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/schafter4.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(15)</span>
+            </div>
+            <h4>Schafter LWB (FIB)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 500km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$89 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/hakuchou.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(7)</span>
+            </div>
+            <h4>Hakuchou (FIB)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 20km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$31 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/tailgater2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(65)</span>
+            </div>
+            <h4>Tailgater S (FIB)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 700km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$45 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/speedo.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(2)</span>
+            </div>
+            <h4>Fourgon Speedo (FIB)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 100km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$33 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Gouv" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/baller6.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1)</span>
+            </div>
+            <h4>Baller LE LWB Blindé (Gouvernement)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 1 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 500km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$98 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/schafter6.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(2)</span>
+            </div>
+            <h4>Schafter LWB (Gouvernement)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 1 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 750km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$125 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/baller5.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(52)</span>
+            </div>
+            <h4>Baller LE Blindé (Gouvernement)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 1000km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$145 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/schafter5.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(7)</span>
+            </div>
+            <h4>Schafter V12 (Gouvernement)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 1 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 250km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$115 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/cog552.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(65)</span>
+            </div>
+            <h4>Cognoscenti 55 (Gouvernement)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 250km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$75 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/cognoscenti2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(8)</span>
+            </div>
+            <h4>Cognoscenti Blindée (Gouvernement)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 100km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$130 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/fbi.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(844)</span>
+            </div>
+            <h4>Buffalo Banalisée (Gouvernement)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 100km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$130 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/fbi2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1129)</span>
+            </div>
+            <h4>Granger Banalisé (Gouvernement)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$65 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="LGuard" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/lguardmesa.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(3)</span>
+            </div>
+            <h4>Mesa LifeGuard</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 50km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$58 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/blazer2.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(21)</span>
+            </div>
+            <h4>Blazer Lifeguard</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 20km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$10 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/lguard.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(300)</span>
+            </div>
+            <h4>Granger LifeGuard</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 660km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$70 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="USMarshall" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/usmsbuffalo.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(65)</span>
+            </div>
+            <h4>Buffalo (US Marshall)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 600km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$90 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/usmsrumpo.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(378)</span>
+            </div>
+            <h4>Rumpo (US Marshall)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 20km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$42 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/usmswashington.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(312)</span>
+            </div>
+            <h4>Washington (US Marshall)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 980km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$56 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/usmscoach.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(0)</span>
+            </div>
+            <h4>Bus (US Marshall)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$400 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/usmsgranger.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(58)</span>
+            </div>
+            <h4>Granger (US Marshall)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 55km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$72 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Mecano" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/brickader.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(558)</span>
+            </div>
+            <h4>Plateau 1 (Mécano)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 3 Propriétaires
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 250km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$160 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/flatbed.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(41)</span>
+            </div>
+            <h4>Plateau 2 (Mécano)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 2 Propriétaires
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 560km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$150 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/slamvan3.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1426)</span>
+            </div>
+            <h4>Slamvan Custom (Mécano)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 3 Propriétaires
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 920km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$70 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/slamtruck.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(0)</span>
+            </div>
+            <h4>Slamtruck (Mécano)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 5km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$120 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/guardian.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(933)</span>
+            </div>
+            <h4>Guardian (Mécano)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 70km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$145 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="ParkRangers" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/prangercara.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(292)</span>
+            </div>
+            <h4>Caracara (Park Rangers)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaires
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 110km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$55 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/prangereveron.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(306)</span>
+            </div>
+            <h4>Everon (Park Rangers)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaires
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 500km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$59 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/proutlaw.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(2)</span>
+            </div>
+            <h4>Outlaw (Park Rangers)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$40 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/prangertor.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(740)</span>
+            </div>
+            <h4>Cruiser (Park Rangers)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 80km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$50 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/prangersct.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span>(1826)</span>
+            </div>
+            <h4>Ranger SCT (Park Rangers)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 95km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$70 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/prangerbu.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(105)</span>
+            </div>
+            <h4>Buffalo (Park Rangers)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 50km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$74 500<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/prangerverus.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(1)</span>
+            </div>
+            <h4>Verus (Park Rangers)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 10km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$22 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/parkbf400.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span>(5)</span>
+            </div>
+            <h4>BF 400 (Park Rangers)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 0km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$18 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="Taxi" class="tab__content">
+          <div class="deals__card">
+            <img src="assets/trhinehart.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-half-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(105)</span>
+            </div>
+            <h4>Rhinehart (Taxi)</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 25km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$60 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="assets/taxi.png" alt="deals" />
+            <div class="deals__rating">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-line"></i></span>
+              <span>(29)</span>
+            </div>
+            <h4>Taxi</h4>
+            <div class="deals__card__grid">
+              <div>
+                <span><i class="ri-group-line"></i></span> 0 Propriétaire
+              </div>
+              <div>
+                <span><i class="ri-steering-2-line"></i></span> Automatique
+              </div>
+              <div>
+                <span><i class="ri-speed-up-line"></i></span> 60km
+              </div>
+              <div>
+                <span><i class="ri-car-line"></i></span> Diesel
+              </div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$40 000<span>/Prix affiché</span></h3>
+              <a href="https://discord.gg/C6twFQeEf6">
+                Acheter
+                <span><i class="ri-arrow-right-line"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="choose__container" id="choose">
+      <div class="choose__image">
+        <img src="assets/scout2.png" alt="Pourquoi nous choisir" />
+      </div>
+      <div class="choose__content">
+        <h2 class="section__header">Pourquoi nous choisir ?</h2>
+        <p class="section__description">
+          Faites confiance à notre expertise pour l'achat de votre prochain véhicule. 
+          Nous offrons des voitures rigoureusement inspectées, des prix compétitifs et 
+          un service client de qualité pour une expérience d'achat en toute sérénité.
+        </p>
+        <div class="choose__grid">
+          <div class="choose__card">
+            <span><i class="ri-shield-check-line"></i></span>
+            <div>
+              <h4>Qualité Garantie</h4>
+              <p>Nos véhicules sont soigneusement vérifiés et certifiés avant la vente.</p>
+            </div>
+          </div>
+          <div class="choose__card">
+            <span><i class="ri-star-line"></i></span>
+            <div>
+              <h4>Large Sélection</h4>
+              <p>Un vaste choix de véhicules neufs et d'occasion pour répondre à tous les besoins.</p>
+            </div>
+          </div>
+          <div class="choose__card">
+            <span><i class="ri-money-dollar-circle-line"></i></span>
+            <div>
+              <h4>Prix Compétitifs</h4>
+              <p>Des tarifs transparents et attractifs sans frais cachés.</p>
+            </div>
+          </div>
+          <div class="choose__card">
+            <span><i class="ri-service-line"></i></span>
+            <div>
+              <h4>Service Client Réactif</h4>
+              <p>Une équipe dédiée pour vous accompagner à chaque étape de votre achat.</p>
+            </div>
+          </div>
+          <div class="choose__card">
+            <span><i class="ri-car-line"></i></span>
+            <div>
+              <h4>Essai sur Route</h4>
+              <p>Testez votre futur véhicule avant de prendre votre décision.</p>
+            </div>
+          </div>
+          <div class="choose__card">
+            <span><i class="ri-file-list-3-line"></i></span>
+            <div>
+              <h4>Financement Facilité</h4>
+              <p>Des solutions de financement adaptées à votre budget.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="subscribe__container">
+      <div class="subscribe__image">
+        <img src="assets/dlcomni.png" alt="Inscription aux mises à jour" />
+      </div>
+      <div class="subscribe__content">
+        <h2 class="section__header">
+          Restez informé des dernières offres automobiles !
+        </h2>
+        <p class="section__description">
+          Ne manquez aucune occasion ! Inscrivez-vous pour recevoir les dernières nouveautés, 
+          offres exclusives et arrivages de véhicules directement sur notre serveur Discord.
+        </p>
+        <form action="/">
+          <input type="text" placeholder="Pseudo Discord" />
+          <a href="https://discord.gg/C6twFQeEf6" target="_blank" class="btn">Rejoindre</a>
+        </form>
+      </div>
+    </section>    
+
+    <section class="section__container client__container" id="client">
+      <h2 class="section__header">Ce que disent nos clients</h2>
+      <p class="section__description">
+        Découvrez pourquoi nos clients nous font confiance ! Lisez leurs avis et témoignages
+        pour voir comment nous offrons un service de qualité et des véhicules d'exception.
+      </p>  
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__details">
+                <img src="assets/layonking.jpg" alt="client" />
+                <div>
+                  <h4>Layon King</h4>
+                  <div class="client__rating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Un concessionnaire au top ! Véhicules variés, service sérieux et à l'écoute. Chaque achat a été une excellente expérience. Une adresse incontournable !
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__details">
+                <img src="assets/howardsullivan.png" alt="client" />
+                <div>
+                  <h4>Howard Sullivan (Gouverneur)</h4>
+                  <div class="client__rating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-half-fill"></i></span>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Une équipe sérieuse et des véhicules de qualité ! En tant que Gouverneur, j'exige le meilleur, et ce concessionnaire ne m'a jamais déçu.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__details">
+                <img src="assets/client-4.jpg" alt="client" />
+                <div>
+                  <h4>Marcel Layer</h4>
+                  <div class="client__rating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-half-fill"></i></span>
+                    <span><i class="ri-star-line"></i></span>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Bon concessionnaire avec un large choix, mais quelques lenteurs dans le service. 
+                Le véhicule est top pour la patrouille, mais une meilleure réactivité serait appréciée.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__details">
+                <img src="assets/alaynasmith.jpg" alt="client" />
+                <div>
+                  <h4>Alayna Smith</h4>
+                  <div class="client__rating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-line"></i></span>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Achat des véhicules pour l'hôpital, service rapide et efficace.  
+                Le vendeur m'a un peu fait peur au début, mais au final, tout s'est bien passé !
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__details">
+                <img src="assets/client-5.jpg" alt="client" />
+                <div>
+                  <h4>Rory Crowner</h4>
+                  <div class="client__rating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Achat de quelques véhicules de shérif pour nos patrouilles, service impeccable !
+              Équipe réactive, conseils au top et livraison rapide. Je recommande à 100 % !
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#" class="logo">
+              <img src="assets/logo.png" alt="logo" />
+              <span>Dream Pro</span>
+            </a>
+          </div>
+          <p>
+            Nous vous proposons les meilleurs véhicules avec un service de qualité. 
+            Restez connecté pour découvrir nos nouveautés, offres spéciales et bien plus encore. 
+            Trouvez la voiture de vos rêves chez nous !
+          </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="https://discord.gg/C6twFQeEf6"><i class="ri-discord-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Nos Prestations</h4>
+          <ul class="footer__links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À Propos</a></li>
+            <li><a href="#deals">Nos Véhicules</a></li>
+            <li><a href="#choose">Pourquoi nous choisir ?</a></li>
+            <li><a href="#client">Avis</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Quelques Modèles</h4>
+          <ul class="footer__links">
+            <li><a href="#deals">Baller ST-D (LSPD)</a></li>
+            <li><a href="#deals">Comet S2 (LSPD)</a></li>
+            <li><a href="#deals">Scout 2 (LSSD)</a></li>
+            <li><a href="#deals">Buffalo S Securité (LSSD)</a></li>
+            <li><a href="#deals">Buffalo (EMS)</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="#">
+                <span><i class="ri-discord-line"></i></span> Luck.
+              </a>
+            </li>
+            <li>
+              <a href="https://discord.gg/ykYhxgQRRy">
+                <span><i class="ri-map-pin-fill"></i></span> Los Santos, DreamUS
+              </a>
+            </li>
+            <li>
+              <a href="https://discord.gg/C6twFQeEf6">
+                <span><i class="ri-mail-fill"></i></span> Dream Pro (Concess Pro)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2025 Dream Pro | Luck. Tous droits réservés.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
