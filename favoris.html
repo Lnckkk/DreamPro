@@ -60,6 +60,8 @@
     <button class="nav-btn right" id="next-image">&#10095;</button>
   </div>
 
+  <div id="toast" class="toast hidden">Vous n'avez aucun favori à réinitialiser.</div>
+
   <div id="reset-modal" class="modal hidden">
     <div class="modal-content">
       <h2>Réinitialiser les favoris</h2>
@@ -88,8 +90,15 @@
   const cancelResetBtn = document.getElementById("cancel-reset");
 
   function openResetModal() {
-    resetModal.classList.remove("hidden");
+  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+  if (favorites.length === 0) {
+    showToast("Vous n'avez aucun favori à réinitialiser.");
+    return;
   }
+
+  resetModal.classList.remove("hidden");
+}
 
   cancelResetBtn.addEventListener("click", () => {
     resetModal.classList.add("hidden");
@@ -104,4 +113,26 @@
     });
     window.location.reload();
   });
+
+  function showToast(message, duration = 3000) {
+    const toast = document.getElementById("toast");
+    let timeLeft = Math.floor(duration / 1000);
+
+    toast.textContent = `${message} (${timeLeft}s)`;
+    toast.classList.add("show");
+
+    const interval = setInterval(() => {
+      timeLeft--;
+      toast.textContent = `${message} (${timeLeft}s)`;
+      if (timeLeft === 0) {
+        clearInterval(interval);
+      }
+    }, 1000);
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+      clearInterval(interval);
+    }, duration);
+  }
+
 </script>

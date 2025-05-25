@@ -15,5 +15,5 @@ if (favorites.length === 0) {
 }
 const cards = favoritesContainer.querySelectorAll(".deals__card");
 cards.forEach((card) => {
-  card.classList.add("deals__card"); // on assure qu'elle a la bonne classe
+  card.classList.add("deals__card");
 });
