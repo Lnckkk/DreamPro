@@ -360,6 +360,37 @@ const vehicleDetails = {
     speedInfo: "Vitesse mesurée sur ligne droite",
     type: "SUV - Diesel",
   },
+  "Vapid Dominator GTX (SAHP)": {
+    images: [
+      { src: "assets/assets_modal/polndom.jpg", label: "Livrée Police San Andreas Highway Patrol" }
+    ],
+    liveries: ["Livrée Police San Andreas Highway Patrol"],
+    spaces: ["2"],
+    speed: "~ 230 km/h",
+    speedInfo: "Vitesse mesurée sur ligne droite",
+    type: "Muscle - Diesel",
+  },
+  "Vapid Stanier (LSPD)": {
+    images: [
+      { src: "assets/assets_modal/rpd.jpg", label: "Livrée Police" }
+    ],
+    liveries: ["Livrée Police"],
+    spaces: ["4"],
+    speed: "~ 170 km/h",
+    speedInfo: "Vitesse mesurée sur ligne droite",
+    type: "Sedans - Diesel",
+  },
+  "Admiral Classic (LSPD)": {
+    images: [
+      { src: "assets/assets_modal/admiral3pol.jpg", label: "Livrée Police Demonstrator" },
+      { src: "assets/assets_modal/admiral3pol_2.jpg", label: "Banalisée" }
+    ],
+    liveries: ["Livrée Police Demonstrator"],
+    spaces: ["4"],
+    speed: "~ 140 km/h",
+    speedInfo: "Vitesse mesurée sur ligne droite",
+    type: "Sedans - Diesel",
+  },
   "Moto Sport (LSPD)": {
     images: [
       { src: "assets/assets_modal/mbu2rb.jpg", label: "Livrée Police" }
@@ -2384,11 +2415,30 @@ const vehicleDetails = {
   },
   "Taxi": {
     images: [
-      { src: "assets/assets_modal/trhinehart.jpg", label: "Livrée Downtown Cab Co. Bleu & Jaune" },
+      { src: "assets/assets_modal/trhinehart.jpg", label: "Livrée Downtown Cab Co. Bleu & Jaune" }
     ],
     liveries: ["Livrée Downtown Cab Co. Bleu & Jaune"],
     spaces: ["4"],
     speed: "~ 160 km/h",
+    speedInfo: "Vitesse mesurée sur ligne droite",
+    type: "Sedans - Diesel",
+  },
+  "Admiral Classic (Taxi)": {
+    images: [
+      { src: "assets/assets_modal/admiral3taxi.jpg", label: "Livrée Downtown Cab Co. Jaune" },
+      { src: "assets/assets_modal/admiral3taxi_2.jpg", label: "Livrée LS Blaine County Taxi Délavé" },
+      { src: "assets/assets_modal/admiral3taxi_3.jpg", label: "Livrée Downtown Cab Co. Bleu & Jaune" },
+      { src: "assets/assets_modal/admiral3taxi_4.jpg", label: "Livrée Taxi Demonstrator" },
+      { src: "assets/assets_modal/admiral3taxi_5.jpg", label: "Livrée LS Blaine County Taxi" },
+      { src: "assets/assets_modal/admiral3taxi_6.jpg", label: "Livrée Vinewood Cab Taxi" },
+      { src: "assets/assets_modal/admiral3taxi_7.jpg", label: "Livrée Grouped Taxi" },
+      { src: "assets/assets_modal/admiral3taxi_8.jpg", label: "Livrée Rockford Hills Taxi" },
+      { src: "assets/assets_modal/admiral3taxi_9.jpg", label: "Livrée LS Taxi Co-Op" },
+      { src: "assets/assets_modal/admiral3taxi_10.jpg", label: "Livrée Taxi Kaufman Cabs" }
+    ],
+    liveries: ["Livrée Downtown Cab Co. Jaune, Livrée LS Blaine County Taxi Délavé, Livrée Downtown Cab Co. Bleu & Jaune, Livrée Taxi Demonstrator, Livrée LS Blaine County Taxi, Livrée Vinewood Cab Taxi, Livrée Grouped Taxi, Livrée Rockford Hills Taxi, Livrée LS Taxi Co-Op, Livrée Taxi Kaufman Cabs"],
+    spaces: ["4"],
+    speed: "~ 140 km/h",
     speedInfo: "Vitesse mesurée sur ligne droite",
     type: "Sedans - Diesel",
   },
