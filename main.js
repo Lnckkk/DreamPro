@@ -391,6 +391,17 @@ const vehicleDetails = {
     speedInfo: "Vitesse mesurée sur ligne droite",
     type: "Sedans - Diesel",
   },
+  "Vapid Stanier Undercover Taxi (LSPD)": {
+    images: [
+      { src: "assets/assets_modal/poltaxi.jpg", label: "Livrée Taxi Downtown Cab Co. Bleu & Jaune" },
+      { src: "assets/assets_modal/poltaxi_2.jpg", label: "Livrée Taxi Downtown Cab Co. Jaune" }
+    ],
+    liveries: ["Livrée Taxi Downtown Cab Co. Bleu & Jaune, Livrée Taxi Downtown Cab Co. Jaune"],
+    spaces: ["4"],
+    speed: "~ 160 km/h",
+    speedInfo: "Vitesse mesurée sur ligne droite",
+    type: "Sedans - Diesel",
+  },
   "Moto Sport (LSPD)": {
     images: [
       { src: "assets/assets_modal/mbu2rb.jpg", label: "Livrée Police" }
