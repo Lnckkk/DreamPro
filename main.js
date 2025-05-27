@@ -461,6 +461,16 @@ const vehicleDetails = {
     speedInfo: "Vitesse mesurée sur ligne droite",
     type: "Off-Road - Diesel",
   },
+  "Mule (LSPD)": {
+    images: [
+      { src: "assets/assets_modal/lssdmule_lspd.jpg", label: "Livrée Police" },
+      { src: "assets/assets_modal/lssdmule.jpg", label: "Livrée Sheriff" }
+    ],
+    liveries: ["Livrée Police", "Livrée Sheriff"],
+    spaces: ["2"],
+    speed: "Si elle roule vite, c’est qu’elle dévale une pente...",
+    type: "Camions - Diesel",
+  },
   "RCV (LSPD)": {
     images: [
       { src: "assets/assets_modal/riot2.jpg", label: "RCV" }
@@ -2474,6 +2484,18 @@ const vehicleDetails = {
     speed: "~ 160 km/h",
     speedInfo: "Vitesse mesurée sur ligne droite",
     type: "SUV - Diesel",
+  },
+
+  /* Pizzeria */
+  "Speedo Express (Willys Pizza)": {
+    images: [
+      { src: "assets/assets_modal/nspeedo_pizza.jpg", label: "Livrée Willys Pizza" },
+    ],
+    liveries: ["Livrée Willys Pizza"],
+    spaces: ["4"],
+    speed: "~ 170 km/h",
+    speedInfo: "Vitesse mesurée sur ligne droite",
+    type: "Fourgons - Diesel",
   },
   // autres véhicules ici
 };
