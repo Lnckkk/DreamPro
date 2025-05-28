@@ -125,30 +125,68 @@
         <p class="section__description">
           Découvrez nos meilleures véhicules, soigneusement sélectionnées pour vous offrir le meilleur rapport qualité-prix et la meilleure expérience. Achetez dès maintenant et conduisez votre véhicule préféré à un prix incroyable !
         </p>
+        <div class="search-container">
+          <input type="text" id="vehicle-search" placeholder="Rechercher un véhicule, un type ou un job..." />
+          <div class="filters">
+            <div class="select-wrapper">
+              <select id="filter-type">
+                <option value="">Type</option>
+                <option value="SUV">SUV</option>
+                <option value="Sports">Sports</option>
+                <option value="Sedans">Sedans</option>
+                <option value="Supers">Supers</option>
+                <option value="Off-Road">Off-Road</option>
+                <option value="Robot">Robot</option>
+                <option value="Vélo">Vélo</option>
+                <!-- à compléter selon ce que t’as dans vehicleDetails -->
+              </select>
+            </div>
+
+            <div class="select-wrapper">
+              <select id="filter-spaces">
+                <option value="">Places</option>
+                <option value="2">Min. 2 places</option>
+                <option value="4">Min. 4 places</option>
+                <option value="6">Min. 6 places</option>
+                <option value="8">Min. 8 places</option>
+              </select>
+            </div>
+
+            <div class="select-wrapper">
+              <select id="filter-speed">
+                <option value="">Vitesse max</option>
+                <option value="150">+150 km/h</option>
+                <option value="200">+200 km/h</option>
+                <option value="210">+210 km/h</option>
+              </select>
+            </div>
+          </div>
+        </div>
         <div class="deals__tabs">
-          <button class="btn active" data-id="Police">LSPD</button>
-          <button class="btn" data-id="Sheriff">LSSD</button>
+          <button class="btn active" data-id="LSPD">LSPD</button>
+          <button class="btn" data-id="LSSD">LSSD</button>
           <button class="btn" data-id="SAMS">SAMS</button>
           <button class="btn" data-id="SAFR">SAFR</button>
-          <button class="btn" data-id="Ammunation">Ammu-Nation</button>
-          <button class="btn" data-id="Armee">Armée</button>
+          <button class="btn" data-id="Ammu-Nation">Ammu-Nation</button>
+          <button class="btn" data-id="Armée">Armée</button>
           <button class="btn" data-id="Bus">Bus</button>
           <button class="btn" data-id="BurgerShot">BurgerShot</button>
           <button class="btn" data-id="Camions">Camions</button>
-          <button class="btn" data-id="Events">Événements</button>
+          <button class="btn" data-id="Événements">Événements</button>
           <button class="btn" data-id="Ferme">Ferme</button>
           <button class="btn" data-id="FIB">FIB</button>
-          <button class="btn" data-id="G6">Gruppe6</button>
-          <button class="btn" data-id="Gouv">Gouvernement</button>
-          <button class="btn" data-id="LGuard">LifeGuard</button>
-          <button class="btn" data-id="USMarshal">US Marshal</button>
-          <button class="btn" data-id="Mecano">Mécano</button>
-          <button class="btn" data-id="ParkRangers">Park Rangers</button>
+          <button class="btn" data-id="Gruppe6">Gruppe6</button>
+          <button class="btn" data-id="Gouvernement">Gouvernement</button>
+          <button class="btn" data-id="LifeGuard">LifeGuard</button>
+          <button class="btn" data-id="US Marshal">US Marshal</button>
+          <button class="btn" data-id="Mécano">Mécano</button>
+          <button class="btn" data-id="Park Rangers">Park Rangers</button>
           <button class="btn" data-id="Taxi">Taxi</button>
-          <button class="btn" data-id="Weazel">Weazel News</button>
-          <button class="btn" data-id="Pizza">Pizzeria</button>
+          <button class="btn" data-id="Weazel News">Weazel News</button>
+          <button class="btn" data-id="Pizzeria">Pizzeria</button>
         </div>
-        <div id="Police" class="tab__content active">
+        <div id="filters-message" style="text-align:center; color:gray; margin:1rem;"></div>
+        <div id="LSPD" class="tab__content active">
           <div class="deals__card">
             <img src="assets/dlballer7.png" alt="deals" />
             <div class="deals__rating">
@@ -1359,7 +1397,7 @@
             </div>
           </div>
         </div>
-        <div id="Sheriff" class="tab__content">
+        <div id="LSSD" class="tab__content">
           <div class="deals__card">
             <img src="assets/bcsdb.png" alt="deals" />
             <div class="deals__rating">
@@ -3194,7 +3232,7 @@
             </div>
           </div>
         </div>
-        <div id="Ammunation" class="tab__content">
+        <div id="Ammu-Nation" class="tab__content">
           <div class="deals__card">
             <img src="assets/aboxville.png" alt="deals" />
             <div class="deals__rating">
@@ -3289,7 +3327,7 @@
             </div>
           </div>
         </div>
-        <div id="Armee" class="tab__content">
+        <div id="Armée" class="tab__content">
           <div class="deals__card">
             <img src="assets/barracks2.png" alt="deals" />
             <div class="deals__rating">
@@ -3948,7 +3986,7 @@
             </div>
           </div>
         </div>
-        <div id="Events" class="tab__content">
+        <div id="Événements" class="tab__content">
           <div class="deals__card">
             <img src="assets/pbus2.png" alt="deals" />
             <div class="deals__rating">
@@ -4419,7 +4457,7 @@
             </div>
           </div>
         </div>
-        <div id="G6" class="tab__content">
+        <div id="Gruppe6" class="tab__content">
           <div class="deals__card">
             <img src="assets/stockade.png" alt="deals" />
             <div class="deals__rating">
@@ -5568,7 +5606,7 @@
             </div>
           </div>
         </div>
-        <div id="Gouv" class="tab__content">
+        <div id="Gouvernement" class="tab__content">
           <div class="deals__card">
             <img src="assets/baller6.png" alt="deals" />
             <div class="deals__rating">
@@ -6066,7 +6104,7 @@
             </div>
           </div>
         </div>
-        <div id="LGuard" class="tab__content">
+        <div id="LifeGuard" class="tab__content">
           <div class="deals__card">
             <img src="assets/lguardmesa.png" alt="deals" />
             <div class="deals__rating">
@@ -6161,7 +6199,7 @@
             </div>
           </div>
         </div>
-        <div id="USMarshal" class="tab__content">
+        <div id="US Marshal" class="tab__content">
           <div class="deals__card">
             <img src="assets/usmsbuffalo.png" alt="deals" />
             <div class="deals__rating">
@@ -6318,7 +6356,7 @@
             </div>
           </div>
         </div>
-        <div id="Mecano" class="tab__content">
+        <div id="Mécano" class="tab__content">
           <div class="deals__card">
             <img src="assets/brickader.png" alt="deals" />
             <div class="deals__rating">
@@ -6475,7 +6513,7 @@
             </div>
           </div>
         </div>
-        <div id="ParkRangers" class="tab__content">
+        <div id="Park Rangers" class="tab__content">
           <div class="deals__card">
             <img src="assets/prangercara.png" alt="deals" />
             <div class="deals__rating">
@@ -6820,7 +6858,7 @@
             </div>
           </div>
         </div>
-        <div id="Weazel" class="tab__content">
+        <div id="Weazel News" class="tab__content">
           <div class="deals__card">
             <img src="assets/newsvan.png" alt="deals" />
             <div class="deals__rating">
@@ -6884,7 +6922,7 @@
             </div>
           </div>
         </div>
-        <div id="Pizza" class="tab__content">
+        <div id="Pizzeria" class="tab__content">
           <div class="deals__card">
             <img src="assets/nspeedo_pizza.png" alt="deals" />
             <div class="deals__rating">

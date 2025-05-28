@@ -68,9 +68,7 @@ ScrollReveal().reveal(".about__card", {
 const tabs = document.querySelector(".deals__tabs");
 
 tabs.addEventListener("click", (e) => {
-  const tabContents = document.querySelectorAll(
-    ".deals__container .tab__content"
-  );
+  const tabContents = document.querySelectorAll(".deals__container .tab__content");
   Array.from(tabs.children).forEach((item) => {
     if (item.dataset.id === e.target.dataset.id) {
       item.classList.add("active");
@@ -85,6 +83,20 @@ tabs.addEventListener("click", (e) => {
       item.classList.remove("active");
     }
   });
+
+  // >>> C'est ici qu'on ajoute la vérification et mise à jour du message :
+  const activeTab = document.querySelector(".tab__content.active");
+  const visibleCards = activeTab 
+    ? Array.from(activeTab.querySelectorAll(".deals__card")).filter(card => getComputedStyle(card).display === "block")
+    : [];
+
+  const filtersMessage = document.getElementById("filters-message");
+
+  if (visibleCards.length === 0) {
+    filtersMessage.innerHTML = `<strong style="color:gray;">Aucun véhicule ne correspond à vos filtres.</strong>`;
+  } else {
+    filtersMessage.innerHTML = "";
+  }
 });
 
 ScrollReveal().reveal(".choose__image img", {
@@ -2542,6 +2554,8 @@ document.addEventListener("click", (e) => {
   const vehicleCard = btn.closest(".deals__card");
   if (vehicleCard) {
     vehicleCard.setAttribute("data-name", name);
+    vehicleCard.setAttribute("data-type", details.type);
+    vehicleCard.setAttribute("data-job", details.job);
     localStorage.setItem(`card_html_${name}`, vehicleCard.outerHTML);
   }
 
@@ -2726,6 +2740,157 @@ document.querySelectorAll(".info-icon").forEach(icon => {
     } else {
       icon.classList.remove("tooltip-bottom");
       icon.classList.add("tooltip-top");
+    }
+  });
+});
+
+/* Barre de recherche */
+const searchInput = document.getElementById("vehicle-search");
+searchInput.addEventListener("input", () => {
+  const searchTerm = searchInput.value.toLowerCase();
+  const allCards = document.querySelectorAll(".deals__card");
+  let resultsCount = 0;
+  let categoriesFound = {};
+  const suggestions = {
+      "sportives": "Sports",
+      "sportive": "Sports",
+      "sportiv": "Sports",
+      "sporti": "Sports",
+      "berlines": "Sedans",
+      "berline": "Sedans",
+      "berlin": "Sedans",
+      "berli": "Sedans",
+      "berl": "Sedans",
+      "velo": "Vélo",
+      "Motos": "Moto",
+      "OffRoad": "Off-Road",
+      "4x4": "Off-Road",
+      "Super": "Supers",
+      "Supersportives": "Supers"
+      // tu peux ajouter autant d'alias que tu veux ici
+    };
+
+  allCards.forEach(card => {
+    const name = card.querySelector("h4")?.textContent;
+    const details = vehicleDetails[name];
+
+    let match = false;
+
+    if (name.toLowerCase().includes(searchTerm)) match = true;
+    if (details) {
+      if (details.type && details.type.toLowerCase().includes(searchTerm)) match = true;
+      if (details.speed && typeof details.speed === "string" && details.speed.toLowerCase().includes(searchTerm)) match = true;
+      if (details.liveries && details.liveries.some(l => l.toLowerCase().includes(searchTerm))) match = true;
+    } 
+
+    if (match) {
+      card.style.display = "block";
+      resultsCount++;
+
+      const parentContainer = card.closest(".tab__content");
+      if (parentContainer) {
+        const cat = parentContainer.id;
+        if (categoriesFound[cat]) {
+          categoriesFound[cat]++;
+        } else {
+          categoriesFound[cat] = 1;
+        }
+      }
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  // Message résultat
+  let resultsMessage = document.getElementById("results-message");
+  if (!resultsMessage) {
+    resultsMessage = document.createElement("p");
+    resultsMessage.id = "results-message";
+    resultsMessage.style.textAlign = "center";
+    resultsMessage.style.color = "gray";
+    resultsMessage.style.margin = "1rem";
+    document.querySelector(".search-container").appendChild(resultsMessage);
+  }
+
+  if (searchTerm.length === 0) {
+  resultsMessage.textContent = "";
+  } else if (resultsCount > 0) {
+    const categoryList = Object.entries(categoriesFound)
+      .map(([cat, count]) => `${cat} (${count})`)
+      .join(", ");
+    resultsMessage.textContent = `${resultsCount} véhicule(s) trouvé(s) dans : ${categoryList}`;
+  } else {
+    let suggestionText = "";
+    if (suggestions[searchTerm]) {
+      suggestionText = ` Peut-être vouliez-vous dire : "${suggestions[searchTerm]}" ?`;
+    }
+    resultsMessage.textContent = `Aucun véhicule trouvé.${suggestionText}`;
+  }
+
+  if (searchTerm.length === 0) {
+    allCards.forEach(card => {
+      card.style.display = "block";
+    });
+    resultsMessage.remove();
+  }
+});
+
+/* Filtres */
+const typeFilter = document.getElementById("filter-type");
+const spacesFilter = document.getElementById("filter-spaces");
+const speedFilter = document.getElementById("filter-speed");
+const allCards = document.querySelectorAll(".deals__card");
+
+[typeFilter, spacesFilter, speedFilter].forEach(filter => {
+  filter.addEventListener("change", () => {
+    allCards.forEach(card => {
+      const name = card.querySelector("h4")?.textContent;
+      const details = vehicleDetails[name];
+      let visible = true;
+
+      // Filtre par Type
+      if (typeFilter.value && (!details || !details.type || !details.type.includes(typeFilter.value))) {
+        visible = false;
+      }
+
+      // Filtre par Nombre de places
+      if (spacesFilter.value) {
+        const placesValue = details && details.spaces
+          ? parseInt(details.spaces)
+          : 0;
+
+        if (placesValue < parseInt(spacesFilter.value)) {
+          visible = false;
+        }
+      }
+
+      // Filtre par Vitesse max (on convertit les valeurs en nombre)
+      if (spacesFilter.value) {
+        const placesValue = details && !isNaN(parseInt(details.spaces))
+          ? parseInt(details.spaces)
+          : NaN;
+
+        if (isNaN(placesValue) || placesValue < parseInt(spacesFilter.value)) {
+          visible = false;
+        }
+      }
+
+      // Affiche ou masque la carte
+      card.style.display = visible ? "block" : "none";
+    });
+
+    // Vérifie combien de cartes sont réellement visibles dans la catégorie active
+    const activeTab = document.querySelector(".tab__content.active");
+    const visibleCards = activeTab 
+      ? Array.from(activeTab.querySelectorAll(".deals__card")).filter(card => getComputedStyle(card).display === "block")
+      : [];
+
+    const filtersMessage = document.getElementById("filters-message");
+
+    if (visibleCards.length === 0) {
+      filtersMessage.innerHTML = `<strong style="color:gray;">Aucun véhicule ne correspond à vos filtres.</strong>`;
+    } else {
+      filtersMessage.innerHTML = "";
     }
   });
 });
