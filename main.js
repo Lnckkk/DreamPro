@@ -2855,22 +2855,22 @@ const allCards = document.querySelectorAll(".deals__card");
 
       // Filtre par Nombre de places
       if (spacesFilter.value) {
-        const placesValue = details && details.spaces
-          ? parseInt(details.spaces)
-          : 0;
-
-        if (placesValue < parseInt(spacesFilter.value)) {
-          visible = false;
-        }
-      }
-
-      // Filtre par Vitesse max (on convertit les valeurs en nombre)
-      if (spacesFilter.value) {
         const placesValue = details && !isNaN(parseInt(details.spaces))
           ? parseInt(details.spaces)
           : NaN;
 
         if (isNaN(placesValue) || placesValue < parseInt(spacesFilter.value)) {
+          visible = false;
+        }
+      }
+
+      // Filtre par Vitesse max (on convertit les valeurs en nombre)
+      if (speedFilter.value) {
+        let speedValue = (details && typeof details.speed === "string")
+          ? parseInt(details.speed.replace(/[^0-9]/g, ""))
+          : NaN;
+
+        if (isNaN(speedValue) || speedValue < parseInt(speedFilter.value)) {
           visible = false;
         }
       }
@@ -2893,4 +2893,21 @@ const allCards = document.querySelectorAll(".deals__card");
       filtersMessage.innerHTML = "";
     }
   });
+});
+const resetButton = document.getElementById("reset-filters");
+
+resetButton.addEventListener("click", () => {
+  // Reset des select
+  typeFilter.value = "";
+  spacesFilter.value = "";
+  speedFilter.value = "";
+
+  // Réaffiche toutes les cartes dans TOUS les onglets
+  document.querySelectorAll(".deals__card").forEach(card => {
+    card.style.display = "block";
+  });
+
+  // Nettoie le message si affiché
+  const filtersMessage = document.getElementById("filters-message");
+  filtersMessage.innerHTML = "";
 });
