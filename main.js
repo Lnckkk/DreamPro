@@ -2286,11 +2286,12 @@ const vehicleDetails = {
   },
 
   /* Mécano */
-  "Plateau 1 (Mécano Samcro)": {
+  "Plateau 1 (Mécano)": {
     images: [
-      { src: "assets/assets_modal/brickader.jpg", label: "Livrée Samcro" }
+      { src: "assets/assets_modal/brickader.jpg", label: "Livrée Samcro" },
+      { src: "assets/assets_modal/brickader_2.jpg", label: "Livrée AutoExotic"}
     ],
-    liveries: ["Livrée Samcro"],
+    liveries: ["Livrée Samcro, Livrée AutoExotic"],
     spaces: ["2"],
     speed: "~ 115 km/h",
     speedInfo: "Vitesse mesurée sur ligne droite",
