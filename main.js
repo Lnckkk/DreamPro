@@ -2307,6 +2307,16 @@ const vehicleDetails = {
     speedInfo: "Vitesse mesurée sur ligne droite",
     type: "Camions - Diesel",
   },
+  "Plateau 3 (Mécano)": {
+    images: [
+      { src: "assets/assets_modal/benerec.jpg", label: "Livrée AutoExotic" }
+    ],
+    liveries: ["Livrée AutoExotic"],
+    spaces: ["2"],
+    speed: "~ 120 km/h",
+    speedInfo: "Vitesse mesurée sur ligne droite",
+    type: "Camions - Diesel",
+  },
   "Slamvan Custom (Mécano)": {
     images: [
       { src: "assets/assets_modal/slamvan3.jpg", label: "Livrée Samcro" },
